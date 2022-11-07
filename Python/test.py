@@ -1,0 +1,2 @@
+message = "test"
+print(message)
