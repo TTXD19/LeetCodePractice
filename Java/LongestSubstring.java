@@ -9,14 +9,18 @@ import java.util.HashMap;
  */
 public class LongestSubstring {
 
-    String s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
+    public static void main(String[] args) {
+        System.out.println(getLongestSub());
+    }
+
+    static String s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
 
     /**
      * Author: Welsen
      * Leet Code Run Time: 476 ms
      * Memory: 144.8 MB
      */
-    public int getLongestSub() {
+    public static int getLongestSub() {
 
         StringBuilder currentSub;
         StringBuilder longestSub = new StringBuilder();
@@ -60,7 +64,7 @@ public class LongestSubstring {
      * Memory: 45.1 MB
      */
 
-    public int getLongestSubStringQuick() {
+    public static int getLongestSubStringQuick() {
         if (s.length() == 0)
             return 0;
         HashMap<Character, Integer> map = new HashMap<>();
