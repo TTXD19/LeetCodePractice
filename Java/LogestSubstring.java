@@ -40,7 +40,7 @@ public class LogestSubstring {
             currentSub.append(splitString[n]);
             for (int i = n + 1; i <= splitString.length - 1; i++) {
                 if (currentSub.toString().contains(String.valueOf(splitString[i]))) {
-                    if (logestSub.isEmpty()) {
+                    if (logestSub.toString().isEmpty()) {
                         logestSub.append(currentSub.toString());
                     }
                     break;
