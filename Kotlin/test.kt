@@ -1,3 +1,5 @@
+package Kotlin
+
 fun main(){
-    println("test Kotlin")
+    println("test")
 }

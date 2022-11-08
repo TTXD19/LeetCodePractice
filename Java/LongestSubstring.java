@@ -4,13 +4,12 @@ import java.util.HashMap;
 
 /**
  * Title: Longest Substring Without Repeating Characters
- * 
  * LeetCode URL:
- * https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/
+ * <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/">...</a>
  */
-public class LogestSubstring {
+public class LongestSubstring {
 
-    private String s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
+    String s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
 
     /**
      * Author: Welsen
@@ -19,8 +18,8 @@ public class LogestSubstring {
      */
     public int getLongestSub() {
 
-        StringBuilder currentSub = new StringBuilder();
-        StringBuilder logestSub = new StringBuilder();
+        StringBuilder currentSub;
+        StringBuilder longestSub = new StringBuilder();
         char[] splitString = s.toCharArray();
 
         if (s.contains(" ") && splitString.length == 1) {
@@ -40,19 +39,19 @@ public class LogestSubstring {
             currentSub.append(splitString[n]);
             for (int i = n + 1; i <= splitString.length - 1; i++) {
                 if (currentSub.toString().contains(String.valueOf(splitString[i]))) {
-                    if (logestSub.toString().isEmpty()) {
-                        logestSub.append(currentSub.toString());
+                    if (longestSub.toString().isEmpty()) {
+                        longestSub.append(currentSub);
                     }
                     break;
                 }
                 currentSub.append(splitString[i]);
-                if (currentSub.length() > logestSub.length()) {
-                    logestSub.setLength(0);
-                    logestSub.append(currentSub.toString());
+                if (currentSub.length() > longestSub.length()) {
+                    longestSub.setLength(0);
+                    longestSub.append(currentSub);
                 }
             }
         }
-        return logestSub.toString().length();
+        return longestSub.toString().length();
     }
 
     /**
@@ -61,10 +60,10 @@ public class LogestSubstring {
      * Memory: 45.1 MB
      */
 
-    public int getLognestSubStringQuick() {
+    public int getLongestSubStringQuick() {
         if (s.length() == 0)
             return 0;
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<>();
         int max = 0;
         for (int i = 0, j = 0; i < s.length(); ++i) {
             if (map.containsKey(s.charAt(i))) {
