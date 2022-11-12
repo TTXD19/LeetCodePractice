@@ -17,8 +17,8 @@ public class LongestSubstring {
 
     /**
      * Author: Welsen
-     * Leet Code Run Time: 476 ms
-     * Memory: 144.8 MB
+     * Time complexity: O(n square)
+     * Space complexity: O(1)
      */
     public static int getLongestSub() {
 
@@ -59,11 +59,10 @@ public class LongestSubstring {
     }
 
     /**
-     * Author: LeetCode
-     * Leet Code Run Time: 12 ms
-     * Memory: 45.1 MB
+     * Author: Welsen
+     * Time complexity: O(n)
+     * Space complexity: O(1)
      */
-
     public static int getLongestSubStringQuick() {
         if (s.length() == 0)
             return 0;
