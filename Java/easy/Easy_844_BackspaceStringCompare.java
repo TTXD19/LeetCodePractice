@@ -1,4 +1,4 @@
-package Java;
+package Java.easy;
 
 public class Easy_844_BackspaceStringCompare {
 

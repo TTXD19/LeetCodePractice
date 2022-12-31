@@ -1,7 +1,7 @@
 package Java.Test;
 
-import Java.Easy_205_IsomorphicStrings;
-import Java.Easy_392_IsSubsequence;
+import Java.easy.Easy_205_IsomorphicStrings;
+import Java.easy.Easy_392_IsSubsequence;
 import kotlin.Pair;
 import org.junit.Assert;
 import org.junit.Test;
