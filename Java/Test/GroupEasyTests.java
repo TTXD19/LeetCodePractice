@@ -1,6 +1,7 @@
 package Java.Test;
 
 import Java.Easy_205_IsomorphicStrings;
+import Java.Easy_392_IsSubsequence;
 import kotlin.Pair;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,6 +28,31 @@ public class GroupEasyTests {
         Assert.assertFalse(testResult_2);
         Assert.assertTrue(testResult_3);
         Assert.assertFalse(testResult_4);
+    }
+
+    @Test
+    public void Easy_392_IsSubsequence_Test() {
+        // Given
+        Pair<String, String> testCase1 = new Pair<>("abc", "ahbgdc");
+        Pair<String, String> testCase2 = new Pair<>("axc", "ahbgdc");
+        Pair<String, String> testCase3 = new Pair<>("acb", "ahbgdc");
+        Pair<String, String> testCase4 = new Pair<>("rjufvjafbxnbgriwgokdgqdqewn", "mjmqqjrmzkvhxlyruonekhhofpzzslupzojfuoztvzmmqvmlhgqxehojfowtrinbatjujaxekbcydldglkbxsqbbnrkhfdnpfbuaktupfftiljwpgglkjqunvithzlzpgikixqeuimmtbiskemplcvljqgvlzvnqxgedxqnznddkiujwhdefziydtquoudzxstpjjitmiimbjfgfjikkjycwgnpdxpeppsturjwkgnifinccvqzwlbmgpdaodzptyrjjkbqmgdrftfbwgimsmjpknuqtijrsnwvtytqqvookinzmkkkrkgwafohflvuedssukjgipgmypakhlckvizmqvycvbxhlljzejcaijqnfgobuhuiahtmxfzoplmmjfxtggwwxliplntkfuxjcnzcqsaagahbbneugiocexcfpszzomumfqpaiydssmihdoewahoswhlnpctjmkyufsvjlrflfiktndubnymenlmpyrhjxfdcq");
+        Pair<String, String> testCase5 = new Pair<>("ab", "baab");
+        Easy_392_IsSubsequence testSubject = new Easy_392_IsSubsequence();
+
+        // When
+        boolean testResult_1 = testSubject.isSubsequence(testCase1.getFirst(), testCase1.getSecond());
+        boolean testResult_2 = testSubject.isSubsequence(testCase2.getFirst(), testCase2.getSecond());
+        boolean testResult_3 = testSubject.isSubsequence(testCase3.getFirst(), testCase3.getSecond());
+        boolean testResult_4 = testSubject.isSubsequence(testCase4.getFirst(), testCase4.getSecond());
+        boolean testResult_5 = testSubject.isSubsequence(testCase5.getFirst(), testCase5.getSecond());
+
+        // Then
+        Assert.assertTrue(testResult_1);
+        Assert.assertFalse(testResult_2);
+        Assert.assertFalse(testResult_3);
+        Assert.assertFalse(testResult_4);
+        Assert.assertTrue(testResult_5);
     }
 
 }
