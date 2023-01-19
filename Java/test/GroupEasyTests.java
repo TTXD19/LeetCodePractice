@@ -1,13 +1,15 @@
-package Java.Test;
+package Java.test;
 
 import Java.easy.Easy_205_IsomorphicStrings;
+import Java.easy.Easy_21_MergeTwoSortedLists;
 import Java.easy.Easy_392_IsSubsequence;
+import Java.easy.ListNode;
 import kotlin.Pair;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class GroupEasyTests {
 
+public class GroupEasyTests {
     @Test
     public void Easy_205_IsomorphicStrings_Test() {
         // Given
@@ -53,6 +55,17 @@ public class GroupEasyTests {
         Assert.assertFalse(testResult_3);
         Assert.assertFalse(testResult_4);
         Assert.assertTrue(testResult_5);
+    }
+
+    @Test
+    public void Easy_21_MergeTwoSortedLists() {
+
+        Easy_21_MergeTwoSortedLists list = new Easy_21_MergeTwoSortedLists();
+
+        ListNode list1 = new ListNode(1, new ListNode(3));
+        ListNode list2 = new ListNode(2, new ListNode(4));
+
+        list.mergeTwoLists(list1, list2).printList();
     }
 
 }
