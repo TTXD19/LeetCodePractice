@@ -4,15 +4,15 @@ public class LinkedListPlayGround {
 
     public static void main(String[] args) {
 
-        Node node = new Node();
-        node.insertFirst(5);
-        node.insertFirst(10);
-        node.insertFirst(12);
-        node.insertFirst(15);
+        Node node = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
 
-        node.insertLast(2);
+        node.next = node2;
+        node2.next = node3;
 
-        node.printList();
+        node.printListTest();
+
     }
 
 }

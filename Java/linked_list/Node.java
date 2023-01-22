@@ -8,13 +8,17 @@ public class Node {
     public Node() {
     }
 
-    private Node(int val) {
+    public Node(int val) {
         this.value = val;
+        this.next = null;
     }
 
-    private Node(int val, int next) {
-        this.value = val;
-        this.next = new Node(next);
+    public void printListTest(){
+        Node currentNode = this;
+        while (currentNode != null){
+            System.out.println(currentNode.value);
+            currentNode = currentNode.next;
+        }
     }
 
     public void printList() {

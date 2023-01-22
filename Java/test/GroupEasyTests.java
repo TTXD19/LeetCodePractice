@@ -1,6 +1,7 @@
 package Java.test;
 
 import Java.easy.Easy_205_IsomorphicStrings;
+import Java.linked_list.Easy_206_ReverseLinkedList;
 import Java.linked_list.Easy_21_MergeTwoSortedLists;
 import Java.easy.Easy_392_IsSubsequence;
 import Java.linked_list.Node;
@@ -70,11 +71,24 @@ public class GroupEasyTests {
         list2.insertFirst(1);
         list2.insertLast(3);
         list2.insertLast(4);
-//        list2.printList();
+        list2.printList();
 
 //        Node result = easy21MergeTwoSortedLists.mergeTwoLists(list1, list2);
 //        result.printList();
 
+    }
+
+    @Test
+    public void Easy_206_MergeTwoSortedLists() {
+        Easy_206_ReverseLinkedList easy206ReverseLinkedList = new Easy_206_ReverseLinkedList();
+
+        Node list1 = new Node();
+        list1.insertFirst(1);
+        list1.insertLast(2);
+        list1.insertLast(4);
+
+        Node result = easy206ReverseLinkedList.reverseList(list1);
+        result.printList();
     }
 
 }
