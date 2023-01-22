@@ -11,8 +11,21 @@ public class LinkedListPlayGround {
         node.next = node2;
         node2.next = node3;
 
-        node.printListTest();
+        reverseLinkedList(node);
+    }
 
+    public static void reverseLinkedList(Node head) {
+        Node currentNode = head;
+        Node prev = null;
+        while (currentNode != null) {
+            Node next = currentNode.next;
+            currentNode.next = prev;
+            prev = currentNode;
+            currentNode = next;
+        }
+        if (prev != null) {
+            prev.printListTest();
+        }
     }
 
 }
