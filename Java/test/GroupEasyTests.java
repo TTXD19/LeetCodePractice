@@ -1,9 +1,9 @@
 package Java.test;
 
 import Java.easy.Easy_205_IsomorphicStrings;
-import Java.easy.Easy_21_MergeTwoSortedLists;
+import Java.linked_list.Easy_21_MergeTwoSortedLists;
 import Java.easy.Easy_392_IsSubsequence;
-import Java.easy.ListNode;
+import Java.linked_list.Node;
 import kotlin.Pair;
 import org.junit.Assert;
 import org.junit.Test;
@@ -59,13 +59,22 @@ public class GroupEasyTests {
 
     @Test
     public void Easy_21_MergeTwoSortedLists() {
+        Easy_21_MergeTwoSortedLists easy21MergeTwoSortedLists = new Easy_21_MergeTwoSortedLists();
 
-        Easy_21_MergeTwoSortedLists list = new Easy_21_MergeTwoSortedLists();
+        Node list1 = new Node();
+        list1.insertFirst(1);
+        list1.insertLast(2);
+        list1.insertLast(4);
+        list1.printList();
+        Node list2 = new Node();
+        list2.insertFirst(1);
+        list2.insertLast(3);
+        list2.insertLast(4);
+//        list2.printList();
 
-        ListNode list1 = new ListNode(1, new ListNode(3));
-        ListNode list2 = new ListNode(2, new ListNode(4));
+//        Node result = easy21MergeTwoSortedLists.mergeTwoLists(list1, list2);
+//        result.printList();
 
-        list.mergeTwoLists(list1, list2).printList();
     }
 
 }
