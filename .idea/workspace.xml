@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="928eac90-5eee-4743-b3e3-980ea539c42b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/medium/Medium_39_Combination_Sum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/ArraysPractice.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/BinarySearch.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/BinaryTrees.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/LinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/Matrix.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/MergeSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/SlidingWindows.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/TwoPointers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/test/GroupMediumTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/test/GroupMediumTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin/test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotlin/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/Matrix.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +26,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "TTXD19"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:TTXD19/LeetCodePractice.git",
+    "accountId": "e9c8a7a0-1d6a-4c0e-90b7-dd74e20cc04c"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2J5ea8AL1IVqLITSK8g4DlIM4EB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -61,6 +64,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
