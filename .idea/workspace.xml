@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928eac90-5eee-4743-b3e3-980ea539c42b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Kotlin/DP.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/BinaryTreeBFS.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/BinaryTreeDFS.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/TreeNode.kt" afterDir="false" />
+    <list default="true" id="928eac90-5eee-4743-b3e3-980ea539c42b" name="Changes" comment="Save code">
+      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/GraphForInterView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin/test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/test.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MinStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MinStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TestKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TestKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/META-INF/LeetCodePractices.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/META-INF/LeetCodePractices.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +60,7 @@
     "Downloaded.Files.Path.Enabled": "true",
     "Kotlin.BinaryTreeDFSKt.executor": "Run",
     "Kotlin.DPKt.executor": "Run",
+    "Kotlin.GraphForInterViewKt.executor": "Run",
     "Kotlin.MatrixKt.executor": "Run",
     "Kotlin.MergeSortKt.executor": "Run",
     "Kotlin.TestKt.executor": "Run",
@@ -98,7 +93,7 @@
       <recent name="Java" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.TestKt">
+  <component name="RunManager" selected="Kotlin.GraphForInterViewKt">
     <configuration name="BinaryTreeDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Kotlin.codetemplete.BinaryTreeDFSKt" />
       <module name="LeetCodePractices" />
@@ -113,15 +108,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatrixKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.MatrixKt" />
+    <configuration name="GraphForInterViewKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.codetemplete.GraphForInterViewKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSortKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.MergeSortKt" />
+    <configuration name="MatrixKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.MatrixKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GraphForInterViewKt" />
         <item itemvalue="Kotlin.TestKt" />
         <item itemvalue="Kotlin.BinaryTreeDFSKt" />
         <item itemvalue="Kotlin.DPKt" />
         <item itemvalue="Kotlin.MatrixKt" />
-        <item itemvalue="Kotlin.MergeSortKt" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +163,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Save code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -176,6 +173,11 @@
           <properties class="java.lang.StackOverflowError" package="java.lang" />
           <option name="timeStamp" value="54" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/Kotlin/codetemplete/GraphForInterView.kt</url>
+          <line>96</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
