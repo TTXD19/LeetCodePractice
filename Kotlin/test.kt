@@ -4,7 +4,41 @@ import java.util.Stack
 import kotlin.math.min
 
 fun main() {
+    val result = maxProduct(218)
+    println(result)
+}
 
+fun maxProduct(n: Int): Int {
+    val array = n.toString().toCharArray()
+    var firstLarge: Int? = null
+    var secondLarge: Int? = null
+    for(i in 0..array.size - 1){
+        val num = array[i].digitToInt()
+        if(firstLarge == null){
+            firstLarge = num
+            continue
+        }
+        if(secondLarge == null){
+            if(num > firstLarge){
+                secondLarge = firstLarge
+                firstLarge = num
+            } else {
+                secondLarge = num
+            }
+            continue
+        }
+        if(num > firstLarge){
+            secondLarge = firstLarge
+            firstLarge = num
+            continue
+        }
+        if(num > secondLarge){
+            secondLarge = num
+        }
+    }
+
+    val result =(firstLarge ?: 1) * (secondLarge ?: 1)
+    return result
 }
 
 fun productExceptSelf(nums: IntArray): IntArray {
