@@ -10,6 +10,7 @@
       <change afterPath="$PROJECT_DIR$/Kotlin/BinarySearch.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin/BinaryTrees.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin/LinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin/Matrix.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin/MergeSort.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin/SlidingWindows.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin/TwoPointers.kt" afterDir="false" />
@@ -53,6 +54,8 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "true",
+    "Kotlin.MatrixKt.executor": "Run",
+    "Kotlin.MergeSortKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -81,7 +84,7 @@
       <recent name="Java" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MergeSortKt">
+  <component name="RunManager" selected="Kotlin.MatrixKt">
     <configuration name="ArraysPracticeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Kotlin.ArraysPracticeKt" />
       <module name="LeetCodePractices" />
@@ -91,6 +94,13 @@
     </configuration>
     <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Kotlin.BinarySearchKt" />
+      <module name="LeetCodePractices" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatrixKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.MatrixKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,20 +120,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoPointersKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.TwoPointersKt" />
-      <module name="LeetCodePractices" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MatrixKt" />
         <item itemvalue="Kotlin.MergeSortKt" />
         <item itemvalue="Kotlin.ArraysPracticeKt" />
         <item itemvalue="Kotlin.SlidingWindowsKt" />
         <item itemvalue="Kotlin.BinarySearchKt" />
-        <item itemvalue="Kotlin.TwoPointersKt" />
       </list>
     </recent_temporary>
   </component>

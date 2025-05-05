@@ -4,9 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928eac90-5eee-4743-b3e3-980ea539c42b" name="Changes" comment="">
+    <list default="true" id="928eac90-5eee-4743-b3e3-980ea539c42b" name="Changes" comment="Save code">
+      <change afterPath="$PROJECT_DIR$/Kotlin/DP/Tabulation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin/Looping.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/Matrix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotlin/SlidingWindows.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/SlidingWindows.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/ArraysPractice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/ArraysPractice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/ArraysPracticeKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/ArraysPracticeKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/BinarySearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/BinarySearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/BinarySearchKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/BinarySearchKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/BinaryTrees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/BinaryTrees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/LinkedListKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/LinkedListKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/ListNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MergeSortKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MergeSortKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MinStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MinStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/SlidingWindows.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/SlidingWindows.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/SlidingWindowsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/SlidingWindowsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TestKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TestKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TimeMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TimeMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TwoPointersKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TwoPointersKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/META-INF/LeetCodePractices.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/META-INF/LeetCodePractices.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +78,11 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "true",
+    "Kotlin.LoopingKt.executor": "Run",
     "Kotlin.MatrixKt.executor": "Run",
     "Kotlin.MergeSortKt.executor": "Run",
+    "Kotlin.SlidingWindowsKt.executor": "Debug",
+    "Kotlin.TabulationKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -88,16 +112,9 @@
       <recent name="Java" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MatrixKt">
-    <configuration name="ArraysPracticeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.ArraysPracticeKt" />
-      <module name="LeetCodePractices" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.BinarySearchKt" />
+  <component name="RunManager" selected="Kotlin.LoopingKt">
+    <configuration name="LoopingKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.LoopingKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,13 +141,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TabulationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.DP.TabulationKt" />
+      <module name="LeetCodePractices" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.LoopingKt" />
+        <item itemvalue="Kotlin.SlidingWindowsKt" />
+        <item itemvalue="Kotlin.TabulationKt" />
         <item itemvalue="Kotlin.MatrixKt" />
         <item itemvalue="Kotlin.MergeSortKt" />
-        <item itemvalue="Kotlin.ArraysPracticeKt" />
-        <item itemvalue="Kotlin.SlidingWindowsKt" />
-        <item itemvalue="Kotlin.BinarySearchKt" />
       </list>
     </recent_temporary>
   </component>
@@ -143,6 +167,15 @@
       <option name="presentableId" value="Default" />
       <updated>1671372431255</updated>
     </task>
+    <task id="LOCAL-00001" summary="Save code">
+      <option name="closed" value="true" />
+      <created>1746122138799</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746122138799</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +191,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Save code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
