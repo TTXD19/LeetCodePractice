@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="928eac90-5eee-4743-b3e3-980ea539c42b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Kotlin/DP.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/BinaryTreeBFS.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/BinaryTreeDFS.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin/codetemplete/TreeNode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/Matrix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotlin/test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin/test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MinStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/MinStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TestKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/Kotlin/TestKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodePractices/META-INF/LeetCodePractices.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodePractices/META-INF/LeetCodePractices.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "TTXD19"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TTXD19&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:TTXD19/LeetCodePractice.git",
-    "accountId": "e9c8a7a0-1d6a-4c0e-90b7-dd74e20cc04c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:TTXD19/LeetCodePractice.git&quot;,
+    &quot;accountId&quot;: &quot;e9c8a7a0-1d6a-4c0e-90b7-dd74e20cc04c&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -57,8 +64,11 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "true",
+    "Kotlin.BinaryTreeDFSKt.executor": "Run",
+    "Kotlin.DPKt.executor": "Run",
     "Kotlin.MatrixKt.executor": "Run",
     "Kotlin.MergeSortKt.executor": "Run",
+    "Kotlin.TestKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -88,16 +98,16 @@
       <recent name="Java" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MatrixKt">
-    <configuration name="ArraysPracticeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.ArraysPracticeKt" />
+  <component name="RunManager" selected="Kotlin.TestKt">
+    <configuration name="BinaryTreeDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.codetemplete.BinaryTreeDFSKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.BinarySearchKt" />
+    <configuration name="DPKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.DPKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,8 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SlidingWindowsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kotlin.SlidingWindowsKt" />
+    <configuration name="TestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kotlin.TestKt" />
       <module name="LeetCodePractices" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.TestKt" />
+        <item itemvalue="Kotlin.BinaryTreeDFSKt" />
+        <item itemvalue="Kotlin.DPKt" />
         <item itemvalue="Kotlin.MatrixKt" />
         <item itemvalue="Kotlin.MergeSortKt" />
-        <item itemvalue="Kotlin.ArraysPracticeKt" />
-        <item itemvalue="Kotlin.SlidingWindowsKt" />
-        <item itemvalue="Kotlin.BinarySearchKt" />
       </list>
     </recent_temporary>
   </component>
