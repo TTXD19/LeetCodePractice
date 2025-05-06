@@ -11,7 +11,8 @@ val edges: MutableList<List<String>> = mutableListOf(
     listOf("m", "k"),
     listOf("k", "l"),
     listOf("o", "n"),
-    listOf("n", "p")
+    listOf("n", "p"),
+    listOf("p", "y")
 )
 val edge_case_2: MutableList<List<String>> = mutableListOf(
     listOf("a", "b"),
@@ -22,21 +23,46 @@ val edge_case_2: MutableList<List<String>> = mutableListOf(
     listOf("i", "j")
 )
 
+val grid: MutableList<List<String>> = mutableListOf(
+    listOf("0", "1", "1", "0", "0"),
+    listOf("0", "1", "1", "0", "1"),
+    listOf("1", "0", "0", "1", "1"),
+    listOf("1", "0", "0", "0", "0"),
+    listOf("1", "1", "1", "0", "1")
+)
+
+val grid_case_2: MutableList<List<String>> = mutableListOf(
+    listOf("1", "0", "1", "0", "0"),
+    listOf("0", "0", "1", "0", "0"),
+    listOf("1", "0", "1", "1", "0"),
+    listOf("1", "1", "0", "0", "1"),
+    listOf("0", "0", "1", "1", "1")
+)
+
+
 fun main() {
     val graphForInterView = GraphForInterView()
 
-    // 建構鄰接表表示的圖
+    // ✅ 使用 edge 資料建構無向圖（鄰接表形式）
     val graph = graphForInterView.buildGraph(edges)
 
-    // 測試 j 能否走到 m（兩點是否連通）
-    println(graphForInterView.dfsHasPath(graph, hashSetOf(), "o", "p")) // true
+    // ✅ 測試「節點 o 是否能走到節點 p」（是否存在一條連通路徑）
+    println(graphForInterView.dfsHasPath(graph, hashSetOf(), "o", "p")) // 預期輸出 true
 
-    // 計算圖中有幾個不連通的區塊（幾個 connected components）
-    println(graphForInterView.dfsCountComponent(graph)) // 4
+    // ✅ 計算圖中有幾個「不連通」的群組（connected components）
+    println(graphForInterView.dfsCountComponent(graph)) // 預期輸出 4
 
+    // ✅ 找出圖中「最大的連通區塊」的節點數（最大 connected component 大小）
     println(graphForInterView.largestComponent(graph))
 
-    println(graphForInterView.bfsShortestPath(graph, "o", "p"))
+    // ✅ 使用 BFS 找出從 o 到 y 的「最短距離」（邊數），若無法到達，回傳 -1
+    println(graphForInterView.bfsShortestPath(graph, "o", "y"))
+
+    // ✅ 計算 grid 中有幾座「島嶼」：1 表示陸地，0 表示水
+    println(graphForInterView.islandCount(grid))
+
+    // ✅ 在 grid_case_2 中找出「最小的一座島」的面積（包含多少格）
+    println(graphForInterView.islandSize(grid_case_2))
 }
 
 class GraphForInterView {
@@ -93,30 +119,50 @@ class GraphForInterView {
         return false
     }
 
+    /**
+     * 使用 BFS（廣度優先搜尋）尋找從 source 到 destination 的最短路徑長度。
+     *
+     * @param edges 圖的鄰接表表示法，每個節點對應其鄰居列表。
+     * @param source 起點節點。
+     * @param destination 終點節點。
+     * @return 最短路徑的邊數，若無法到達 destination 則回傳 -1。
+     */
     fun bfsShortestPath(edges: HashMap<String, MutableList<String>>, source: String, destination: String): Int {
-        val queue = LinkedList<String>()
-        var pathCount = 0
+        // 使用 queue 儲存 Pair(當前節點, 與起點的距離)
+        val queue = LinkedList<Pair<String, Int>>()
+
+        // 記錄已訪問過的節點，避免重複拜訪造成無限迴圈
         val visited = hashSetOf<String>()
-        queue.offer(source)
+
+        // 起點加入 queue，距離為 0
+        queue.offer(Pair(source, 0))
+
+        // 開始 BFS 探索
         while (queue.isNotEmpty()) {
-            val currentNode = queue.pop()
-            if (visited.contains(currentNode)){
-                continue
-            }
-            if (currentNode == destination){
-                return pathCount
-            }
-            pathCount++
-            val neighborsList = edges[currentNode]
-            if (neighborsList?.isNotEmpty() == true){
-                for (neighbor in neighborsList){
-                    queue.offer(neighbor)
+            val currentNode = queue.pop() // 取出當前節點與距離
+
+            // 如果當前節點就是目標，回傳距離
+            if (currentNode.first == destination) return currentNode.second
+
+            // 若已訪問過，跳過
+            if (visited.contains(currentNode.first)) continue
+
+            // 標記當前節點為已訪問
+            visited.add(currentNode.first)
+
+            // 拜訪所有鄰居節點，加入 queue，距離 +1
+            val neighborsList = edges[currentNode.first]
+            if (neighborsList?.isNotEmpty() == true) {
+                for (neighbor in neighborsList) {
+                    queue.offer(Pair(neighbor, currentNode.second + 1))
                 }
             }
         }
 
-        return pathCount
+        // 若未找到目標節點，回傳 -1 表示無法到達
+        return -1
     }
+
 
     /**
      * 計算圖中有幾個連通元件（connected components）
@@ -223,5 +269,106 @@ class GraphForInterView {
         }
 
         return size
+    }
+
+    // 主函式：計算有幾座島
+    fun islandCount(grid: MutableList<List<String>>): Int {
+        val visited = mutableSetOf<Pair<Int, Int>>()
+        var islandCount = 0
+        grid.forEachIndexed { rowIndex, column ->
+            column.forEachIndexed { columnIndex, _ ->
+                // ✅ 若是「島」且尚未拜訪，才進行 DFS
+                if (grid[rowIndex][columnIndex] == "1" && !visited.contains(Pair(rowIndex, columnIndex))) {
+                    exploreIsland(grid, rowIndex, columnIndex, visited)
+                    // 找到一座新的島
+                    islandCount++
+                } else {
+                    // 記錄已拜訪的格子
+                    visited.add(Pair(rowIndex, columnIndex))
+                }
+            }
+        }
+        return islandCount
+    }
+
+    fun exploreIsland(
+        grid: MutableList<List<String>>,
+        rowIndex: Int,
+        columnIndex: Int,
+        visited: MutableSet<Pair<Int, Int>>
+    ) {
+        // ✅ 超出邊界或不是島就返回
+        if (rowIndex < 0 || columnIndex < 0 || rowIndex > grid.size - 1 || columnIndex > grid[0].size - 1 || grid[rowIndex][columnIndex] == "0") return
+        if (visited.contains(Pair(rowIndex, columnIndex))) return
+        // 記錄已拜訪的格子
+        visited.add(Pair(rowIndex, columnIndex))
+        // (0, 1) 往右
+        // (1, 0) 往下
+        // (0, -1) 往左
+        // (-1, 0) 往上
+        val directions = listOf(Pair(0, 1), Pair(1, 0), Pair(0, -1), Pair(-1, 0))
+        for (direction in directions) {
+            exploreIsland(grid, rowIndex + direction.first, columnIndex + direction.second, visited)
+        }
+    }
+
+    // ✅ 找出「最小島嶼」的面積大小
+    fun islandSize(grid: MutableList<List<String>>): Int {
+        val visited = mutableSetOf<Pair<Int, Int>>()
+        var islandSize: Int? = null
+
+        grid.forEachIndexed { rowIndex, column ->
+            column.forEachIndexed { columnIndex, _ ->
+                val pos = Pair(rowIndex, columnIndex)
+
+                // ✅ 若是「島」且尚未拜訪，才進行 DFS 探索
+                if (grid[rowIndex][columnIndex] == "1" && !visited.contains(pos)) {
+                    val size = exploreIslandSize(grid, rowIndex, columnIndex, visited, 0)
+
+                    // ✅ 更新最小島嶼大小
+                    islandSize = if (islandSize == null) size else minOf(size, islandSize!!)
+                } else {
+                    // ✅ 非島或已拜訪的地方，也加進 visited（避免重複）
+                    visited.add(pos)
+                }
+            }
+        }
+
+        return islandSize!! // 假設保證至少有一座島
+    }
+
+    // ✅ 計算某一座島的面積（以 DFS 遞迴進行）
+    fun exploreIslandSize(
+        grid: MutableList<List<String>>,
+        rowIndex: Int,
+        columnIndex: Int,
+        visited: MutableSet<Pair<Int, Int>>,
+        size: Int
+    ): Int {
+        // ✅ 超出邊界 or 是水（"0"）就不計入大小
+        if (
+            rowIndex < 0 || columnIndex < 0
+            || rowIndex >= grid.size
+            || columnIndex >= grid[0].size
+            || grid[rowIndex][columnIndex] == "0"
+        ) return size
+
+        val pos = Pair(rowIndex, columnIndex)
+        if (visited.contains(pos)) return size
+
+        visited.add(pos)
+        var newSize = size + 1
+
+        // (0, 1) 往右
+        // (1, 0) 往下
+        // (0, -1) 往左
+        // (-1, 0) 往上
+        val directions = listOf(Pair(0, 1), Pair(1, 0), Pair(0, -1), Pair(-1, 0))
+        for (direction in directions) {
+            newSize =
+                exploreIslandSize(grid, rowIndex + direction.first, columnIndex + direction.second, visited, newSize)
+        }
+
+        return newSize
     }
 }

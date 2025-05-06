@@ -4,22 +4,40 @@ import java.util.Stack
 import kotlin.math.min
 
 fun main() {
-    val result = maxProduct(218)
+    val result = change(5, intArrayOf(1, 2, 5))
     println(result)
+}
+
+fun change(amount: Int, coins: IntArray): Int {
+    return helpChange(amount, coins)
+}
+
+fun helpChange(amount: Int, coins: IntArray): Int {
+    if (amount < 0) {
+        return 0
+    }
+    if (amount == 0) {
+        return 1
+    }
+    var result = 0
+    for (coin in coins){
+        result += helpChange(amount - coin, coins)
+    }
+    return result
 }
 
 fun maxProduct(n: Int): Int {
     val array = n.toString().toCharArray()
     var firstLarge: Int? = null
     var secondLarge: Int? = null
-    for(i in 0..array.size - 1){
+    for (i in 0..array.size - 1) {
         val num = array[i].digitToInt()
-        if(firstLarge == null){
+        if (firstLarge == null) {
             firstLarge = num
             continue
         }
-        if(secondLarge == null){
-            if(num > firstLarge){
+        if (secondLarge == null) {
+            if (num > firstLarge) {
                 secondLarge = firstLarge
                 firstLarge = num
             } else {
@@ -27,17 +45,17 @@ fun maxProduct(n: Int): Int {
             }
             continue
         }
-        if(num > firstLarge){
+        if (num > firstLarge) {
             secondLarge = firstLarge
             firstLarge = num
             continue
         }
-        if(num > secondLarge){
+        if (num > secondLarge) {
             secondLarge = num
         }
     }
 
-    val result =(firstLarge ?: 1) * (secondLarge ?: 1)
+    val result = (firstLarge ?: 1) * (secondLarge ?: 1)
     return result
 }
 
@@ -106,7 +124,7 @@ fun twoSum(nums: IntArray, target: Int): IntArray {
     val hashMap = hashMapOf<Int, Int>()
     for ((index, num) in nums.withIndex()) {
         val diff = target - nums[index]
-        if (hashMap.containsKey(diff)){
+        if (hashMap.containsKey(diff)) {
             return intArrayOf(hashMap[diff]!!, index)
         }
         hashMap[num] = index
@@ -121,11 +139,11 @@ fun isValid(s: String): Boolean {
         '[' to ']', '(' to ')', '{' to '}'
     )
 
-    for (char in charList){
-        if (char in charMap.keys){
+    for (char in charList) {
+        if (char in charMap.keys) {
             stack.push(char)
-        } else if (char in charMap.values){
-            if (stack.isEmpty() || charMap[stack.pop()] != char){
+        } else if (char in charMap.values) {
+            if (stack.isEmpty() || charMap[stack.pop()] != char) {
                 return false
             }
         } else {
@@ -163,3 +181,5 @@ class MinStack() {
         return minStack.peek()
     }
 }
+
+
